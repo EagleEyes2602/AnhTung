@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - DOM</title>
+    <style>
+        .content{
+            color: red;
+        }
+        
+        .content-green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="listing">
+                <a id="first-element" href="">Home</a>
+            </li>
+            <li class="listing">
+                <a href="">Products</a>
+            </li>
+            <li class="listing">
+                <a href="">News</a>
+            </li>
+        </ul>
+        <form action="" method="GET">
+            <input type="text" name="UserName">
+            <input type="password" name="Password">
+            <button type="button" id="btn-red" onclick="RedColor();">Login</button>
+            <button type="button" id="btn-green" onclick="GreenColor();">Login</button>
+        </form>
+        <p id="show-key-code"></p>
+    </nav>
+    <script>
+
+        // select theo Id
+        var element = document.getElementById('first-element');
+        // element.innerHTML = "<b>Testing</b>";
+
+        // select theo tên thẻ
+        var elements1 = document.getElementsByTagName('a');
+        // elements1[1].className = "content";
+
+        // select theo tên class
+        // document.getElementsByClassName("listing")[0].innerHTML = "<p id='first-element'><i>Home</i></p>";
+
+        // select theo bộ selector
+        // document.querySelectorAll("nav>ul>li>a").forEach(
+        //     function(item){
+        //         item.className = "content";
+        //     }
+        // )
+
+        function RedColor(){
+            document.querySelectorAll("nav>ul>li>a").forEach(
+                function(item){
+                    item.className = "content";
+                }
+            )
+        }
+
+        function GreenColor(){
+            document.querySelectorAll("nav>ul>li>a").forEach(
+                function(item){
+                    item.className = "content-green";
+                }
+            )
+        }
+        
+        // Các sự kiện có trong js Listener
+        document.getElementById('btn-green').onclick = function(){
+            document.querySelectorAll("nav>ul>li>a").forEach(
+                function(item){
+                    item.className = "content-green";
+                }
+            )
+        };
+        
+        document.getElementById('btn-green').click = GreenColor();
+
+        document.querySelector("input[name=UserName]").onchange = function(){
+            alert("Input đã được thay đổi");
+        }
+
+        document.querySelector("input[name=Password]").onkeydown = function(event){
+            document.querySelector("input[name=Password]").style.background = "green";
+            document.querySelector("#show-key-code").innerHTML = event.keyCode;
+        }
+
+        document.querySelector("input[name=Password]").onkeyup = function(){
+            document.querySelector("input[name=Password]").style.background = "red";
+        }
+        // document.querySelectorAll("nav>ul>li>a").forEach(
+        //     function(item){
+        //         item.addEventListener("click", );
+        //     }
+        // )
+
+        // Class
+        class Student{
+            Id;
+            Name;
+            Age;
+            constructor(id, name, age){
+                this.Id = id;
+                this.Name = name;
+                this.Age = age;
+            }
+
+            Print(){
+                alert("Id: " + this.Id + " Name: " + this.Name + " Age: " + this.Age);
+            }
+        }
+
+        // Object
+        var std = new Student(1, "Viet", 23);
+        // std.Print();
+
+        var std1 = new Object();
+        std1.Name = 'Nam';
+
+        var std2 = {
+            Name: "Hoang",
+            Display: function(){
+                alert(std2.Name);
+            }
+        };
+
+        console.log(std2.Name);
+        document.getElementById("btn-red").onclick = std2.Display;
+    </script>
+</body>
+</html>

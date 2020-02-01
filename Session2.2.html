@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session 2.2 - Form</title>
+</head>
+<body>
+    <!-- action: Đường dẫn đến nơi muốn hứng dữ liệu (nơi nhận yêu cầu) -->
+    <!-- 
+        method: phương thức truyền dữ liệu
+            GET: nối value của các input vào url
+            POST: truyền data ngầm định, không hiển thị lên trên url
+        required: k được để trống
+        value: setup giá trị cho input
+    -->
+
+    <form action="" method="GET" enctype="multipart/form-data">
+        <!-- <input type="title" name="userName" required value="MINH">
+        <input type="password" name="password">
+        <input type="checkbox" name="rememberMe" id="remember">
+        <input type="email" name="email"> -->
+
+        <!-- Thời gian -->
+        <!-- <input type="date" name="date">
+        <input type="time" name="time">
+        <input type="datetime" name="dateTime">
+        <input type="datetime-local" name="dateTimeLocal">
+        <input type="datetime" name="dateTime"> -->
+
+        <!--  -->
+        <!-- <input type="number" name="number">
+        <br>
+        Nam <input type="radio" name="gender" value="male">
+        Nữ <input type="radio" name="gender" value="female">
+        <br>
+        <input type="color" name="color">
+        <br>
+        <input type="range" name="range">
+        <br>
+        <input type="button" name="btn">
+        <br> -->
+        <input type="text" name="id" value="10" hidden>
+        <input type="text" name="createddate" value="2019/01/01" readonly>
+        <input type="text" name="createddate" value="2019/01/01" disabled>
+        <input type="file" name="image">
+        <textarea name="abc" id="" cols="30" rows="2" placeholder="Tên"></textarea>
+        <input type="reset">
+        <input type="submit" value="Send" >
+    </form>
+    <button>Quên mật khẩu</button>
+
+    <table border="1px" cellspacing="0px">
+        <tr>
+            <td rowspan="6">r1</td>
+            <td rowspan="2">r1</td>
+            <td rowspan="2">r1</td>
+            <td rowspan="3">r1</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td rowspan="2">r2</td>
+            <td rowspan="2">r2</td>
+        </tr>
+        <tr>
+            <td rowspan="3">r3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">r3</td>
+            <td rowspan="2">r3</td>
+        </tr>
+        <tr></tr>
+    </table>
+</body>
+</html>
+
+<!-- 
+    Các cách đặt tên biến trong C#
+    Camel case: userName
+    Pascal case (Cap camel case): UserName
+    Snake case: user_name
+    Cap Snake case: USER_NAME
+    Kebab case: user-name (Frontend: folder, url, class, id)
+ -->

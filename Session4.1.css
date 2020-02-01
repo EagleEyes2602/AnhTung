@@ -1,0 +1,104 @@
+/* Truy xuất đến các đối tượng trong html */
+        /* Selector */
+        /* - Tên thẻ */
+        /* li{
+            color: red;
+        } */
+
+        /* - Id */
+        /* #li1{
+            color: green;
+        } */
+
+        /* - Class */
+        /* .big{
+            font-size: 1.5em;
+        } */
+
+        /* - Thuộc tính */
+        /* [data-id]{
+            background-color: black;
+        } */
+
+        
+        /* div ul li{
+            color: yellow;
+        } */
+        
+        /* div.main-menu > ul > li:first-child, li:last-child{
+            border-radius: 5px
+        } */
+
+        header{
+            height: 200px;
+        }
+
+        div.main-menu > ul > li:first-child{
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        div.main-menu > ul > li:last-child{
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        div > ul > li{
+            color: purple;
+        }
+
+        div.main-menu{
+            text-align: center;
+            float: right;
+        }
+
+        div.main-menu > ul{
+            display: flex;
+        }
+        
+        div.main-menu > ul > li{
+            background-color: blueviolet;
+            padding: 10px 20px;
+            margin-right: 1px; 
+            width: 100px;
+            min-width: 30px;
+            max-width: 50px;
+        }
+
+        div > ul > li:first-child{
+            color: rgb(10, 37, 32);
+        }
+
+        /* div > ul > li:last-child{
+            color: rgb(170, 108, 108);
+        } */
+
+        div > ul > li:nth-of-type(3){
+            color: rgb(21, 11, 160);
+        }
+
+        div > ul > li:hover{
+            color: black;
+            font-size: 1.5em;
+        }
+
+        /* #li1{
+            color: 
+        } */
+        
+        /* li[data-id='1']{
+            color:blue;
+        }*/
+
+        .sub-menu{
+            float: left;
+            height: 200px;
+            clear: both;
+        }
+        
+        .test img{
+            width: 30%;
+            float: left;
+        }
+        .test p {
+        }

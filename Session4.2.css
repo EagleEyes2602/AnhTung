@@ -1,0 +1,100 @@
+
+@font-face {
+    font-family: Bebas_Neue;
+    src: url(Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+.main-menu{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Bebas_Neue;
+}
+
+.main-menu > ul{
+    position: relative;
+    list-style: none;
+    display: flex;
+}
+
+.main-menu ul li{
+    width: 20%;
+    background-color: darkgrey;
+    /* padding: 6px 15px; */
+    margin-right: 1px;
+    /* cursor: pointer; */
+}
+/* letter-spacing - khoảng cách giữa các ký tự trong 1 từ 
+    word-spacing - khoảng cách giữa các từ với nhau
+*/
+.main-menu ul li a{
+    display: block;
+    padding: 6px 15px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.main-menu > ul > li:first-child {
+    border-bottom-left-radius: 5px;
+}
+.main-menu > ul > li:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.main-menu a{
+    text-decoration: none;
+}
+
+.main-menu ul li:hover > ul{
+    display: block;
+}
+
+ul.second-menu{
+    display: none;
+    /* !important - Ưu tiên các thuộc tính có !important */
+    position: absolute;
+    z-index: 1;
+    list-style: none;
+    top: 28px;
+    left: 112px;
+    width: 19.8%;
+}
+
+ul.second-menu > li{
+    border-top: 1px white solid;
+    width: 100%;
+}
+
+ul.second-menu > li:last-child{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#content > div:first-child{
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+#content > div:first-child > p{
+    position: absolute;
+    z-index: 0;
+}
+
+#content > div:first-child > img{
+    position: absolute;
+    z-index: -1;
+}
+
+#content > div:nth-of-type(2){
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    transition: all 1s;
+}
+
+#content > div:nth-of-type(2):hover{
+    width: 100px;
+    height: 100px;
+}
